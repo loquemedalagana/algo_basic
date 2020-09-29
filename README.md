@@ -6,5 +6,31 @@
 
 <hr/>
 
+## JS 정수 정렬
+
+``` javascript
+arr.sort((first, second) => first-second); //내림차순은 반대로
+```
+
+## js permutation
+
+``` javascript
+const permutation = arr => {
+    return arr.reduce((list, element) => {
+        console.log(list, element);
+        let newList = [];
+        list.forEach(seq => {
+            for(let i = seq.length; i>=0; i--){
+                let newSeq = [].concat(seq);
+                newSeq.splice(i, 0, element);
+                newList.push(newSeq);
+            }
+        })
+        return newList;
+    }, [[]]);
+}
+
+```
+
 ## 참고 블로그
 https://dev-muko.com/entry/1%EC%B0%A8%EC%9B%90-%EB%B0%B0%EC%97%B4-%ED%8E%B81-Nodejs%EB%A1%9C-%EB%B0%B1%EC%A4%80BOJ-%EB%8B%A8%EA%B3%84%EB%B3%84%EB%A1%9C-%ED%92%80%EC%96%B4%EB%B3%B4%EA%B8%B0%EB%A5%BC-%ED%92%80%EC%96%B4%EB%B3%B4%EB%8B%A4?category=907653
