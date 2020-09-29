@@ -23,7 +23,7 @@ const solve = input => {
 
     if(N/K < 2 || N - sum < 0) console.log(-1);
     else {
-        console.log(N-sum === 0 ? K-1 : K);
+        console.log((N-sum)%K === 0 ? K-1 : K);
     }
 }
 
