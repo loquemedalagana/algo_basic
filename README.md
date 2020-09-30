@@ -6,6 +6,18 @@
 
 <hr/>
 
+## js 문자열 체크
+
+``` javascript
+const numPattern = /[0-9]/; //숫자 있는지 체크
+const alphabetPattern = /[a-zA-Z]/; //알파벳 있는지 체크
+const specialCharacterPattern = /[~!@#$%^&*()_+|<>?:{}]/; //특수문자 체크
+
+const checkSpace = str => { //공백 체크
+    return str.search(/\s/) !== -1 ? true : false;
+};
+```
+
 ## JS 정수 정렬
 
 ``` javascript
@@ -30,6 +42,28 @@ const permutation = arr => {
     }, [[]]);
 }
 
+```
+
+## js queue
+``` javascript
+function Queue() {
+    this.elements = [];
+    Queue.prototype.push = element => {
+        this.elements.push(element);
+    }    
+    Queue.prototype.pop = () => this.elements.shift();
+    Queue.prototype.empty = () => this.elements.length === 0;
+    Queue.prototype.front = () => !this.empty() ? this.elements[0] : undefined;
+    Queue.prototype.size = () => this.elements.length;    
+}
+```
+
+## js pair
+``` javascript
+function Pair (first, second) {
+    this.first = first;
+    this.second = second;
+}
 ```
 
 ## 참고 블로그
