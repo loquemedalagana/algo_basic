@@ -31,7 +31,7 @@ const solve = () => {
     graph.sort((first, second) => first.cost-second.cost);
     const parent = new Array(N).fill(0).map((_, i) => i);
     let adj = new Array(N);
-    let check = new Array(N).fill(-1);
+    let check = new Array(N);
 
     const Find = x => {
         if(x === parent[x]) return x;
@@ -47,27 +47,49 @@ const solve = () => {
     }
 
     //bfs
+    const bfs = cur => {
+        let q = new Queue;
+        check.fill(-1);
+        check[cur] = 0; q.push(cur);
+
+        while(!q.empty()){
+            const now = q.front(); q.pop();
+            adj[now].forEach(next => {
+                if(check[next.to] === -1){
+                    check[next.to] = check[now] + next.cost;
+                    q.push(next.to);
+                }
+            })
+        }
+    }
 
     let minCost = 0;
     for(let i=0; i < M; i++){
         let x = Find(graph[i].from);
         let y = Find(graph[i].to);
-
         if(x != y){
             Union(graph[i].from, graph[i].to);
             minCost += graph[i].cost;
-            console.log(graph[i].from, graph[i].to, graph[i].cost);
 
             if(adj[graph[i].from] === undefined) adj[graph[i].from] = [];
             adj[graph[i].from].push({to: graph[i].to, cost: graph[i].cost});
             if(adj[graph[i].to] === undefined) adj[graph[i].to] = [];
             adj[graph[i].to].push({to: graph[i].from, cost: graph[i].cost});
         }
-        console.log(adj);
     }
-    //console.log(graph);
-
     console.log(minCost);
+
+    let maxCost = 0;
+    bfs(0);
+
+    let stVertex = 0;
+
+    for(let i=0; i<N; i++){
+        if(check[i] > check[stVertex]) stVertex = i;
+    }
+
+    bfs(stVertex);
+    console.log(Math.max.apply(null, check));
 }
 
 const graph = [];
