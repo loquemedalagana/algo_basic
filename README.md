@@ -24,6 +24,13 @@ const checkSpace = str => { //공백 체크
 arr.sort((first, second) => first-second); //내림차순은 반대로
 ```
 
+## JS 다차원 배열 생성
+
+``` javascript
+MAP = Array.from(Array(H+1), () => Array(W+1).fill(0));
+check = Array.from(Array(H+1), () => Array.from(Array(W+1), () => Array(4).fill(0)));
+```
+
 ## js permutation
 
 ``` javascript
