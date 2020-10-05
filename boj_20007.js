@@ -1,7 +1,3 @@
-//math.floor
-const intDiv = num => Math.floor(num);
-
-//input and output
 const getReadLine = () => {
     const readline = require('readline');
     return readline.createInterface({
