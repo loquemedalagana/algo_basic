@@ -12,13 +12,15 @@ const solve = () => {
 
 }
 
-const inputs = [];
+let lineCnt = 0;
 
 const start = rl => {
     rl.on('line', line => {
-        inputs.push(line.split(' '));
+        lineCnt++;
+        const tempInput = line.split(' ').map(Number);
+        console.log(lineCnt, tempInput);
     }).on('close', () => {
-        solve(input);
+        solve();
         process.exit();
     })
 }

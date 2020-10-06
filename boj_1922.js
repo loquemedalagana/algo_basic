@@ -1,7 +1,4 @@
-//math.floor
-const intDiv = num => Math.floor(num);
-
-//input and output
+//아직안품
 const getReadLine = () => {
     const readline = require('readline');
     return readline.createInterface({
@@ -16,15 +13,13 @@ const solve = () => {
 
 }
 
-let lineCnt = 0;
+const inputs = [];
 
 const start = rl => {
     rl.on('line', line => {
-        lineCnt++;
-        const tempInput = line.split(' ').map(Number);
-        console.log(lineCnt, tempInput);
+        inputs.push(line.split(' '));
     }).on('close', () => {
-        solve();
+        solve(input);
         process.exit();
     })
 }
