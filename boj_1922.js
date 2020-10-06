@@ -19,7 +19,7 @@ const start = rl => {
     rl.on('line', line => {
         inputs.push(line.split(' '));
     }).on('close', () => {
-        solve(input);
+        solve();
         process.exit();
     })
 }

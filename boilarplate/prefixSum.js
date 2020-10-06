@@ -9,31 +9,27 @@ const getReadLine = () => {
 const rl = getReadLine();
 
 const solve = () => {
-    arr.sort((a, b) => a.x-b.x); 
-    const maxLength = K*2+1;
+    const segment = K*2+1;
+    let sum = 0;
+    let prefixSum = new Array(maxPos+1).fill(0);
 
-    let ans = 0;
-    let left = 0, right = 0, sum = 0;
-
-    while(left <= right && right < N){
-        const length = arr[right].x - arr[left].x + 1;
-        if(length > maxLength) {
-            sum = 0;
-            left++;
-            if(left < N && left > right) {
-                right = left;
-            }
-        } else {
-            
+    const info = new Map([...map].sort((a, b) => a[0] > b[0] ? 1 : -1));
+    
+    for(let i=minPos; i<=maxPos; i++){
+        if(info.has(i)){
+            sum+=info.get(i);
+            console.log(sum);
+            prefixSum[i] = sum;
+        }
+        else{
+            prefixSum[i] = prefixSum[i-1];
         }
     }
-
-
-    console.log(ans);
+    console.log(prefixSum);
 }
 
 let lineCnt = 0;
-var N, K, arr = [];
+var N, K, map;
 let maxPos = -1, minPos = Number.MAX_VALUE;
 
 const start = rl => {
@@ -42,11 +38,12 @@ const start = rl => {
         const tempInput = line.split(' ').map(Number);
         if(lineCnt < 2) {
             N = tempInput[0], K = tempInput[1];
+            map = new Map();
         }
         else { //mapping
+            map.set(tempInput[1], tempInput[0]);
             maxPos = Math.max(maxPos, tempInput[1]);
             minPos = Math.min(minPos, tempInput[1]);
-            arr.push({x: tempInput[1], g: tempInput[0]});
         }
     }).on('close', () => {
         solve();

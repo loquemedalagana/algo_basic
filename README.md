@@ -73,5 +73,12 @@ function Pair (first, second) {
 }
 ```
 
+## JS map sort
+https://stackoverflow.com/questions/31158902/is-it-possible-to-sort-a-es6-map-object/31159284
+<br/>
+<pre>
+c++은 자동으로 정렬해주지만 자스는 직접 해줘야 한다.
+</pre>
+
 ## 참고 블로그
 https://dev-muko.com/entry/1%EC%B0%A8%EC%9B%90-%EB%B0%B0%EC%97%B4-%ED%8E%B81-Nodejs%EB%A1%9C-%EB%B0%B1%EC%A4%80BOJ-%EB%8B%A8%EA%B3%84%EB%B3%84%EB%A1%9C-%ED%92%80%EC%96%B4%EB%B3%B4%EA%B8%B0%EB%A5%BC-%ED%92%80%EC%96%B4%EB%B3%B4%EB%8B%A4?category=907653
