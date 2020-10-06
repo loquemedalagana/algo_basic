@@ -18,14 +18,16 @@ const solve = () => {
     while(left <= right && right < N){
         const length = arr[right].x - arr[left].x + 1;
         if(length > maxLength) {
-            sum = 0;
+            sum -= arr[left].g;
             left++;
             if(left < N && left > right) {
                 right = left;
             }
         } else {
-            
+            sum += arr[right].g;
+            right++;
         }
+        ans = Math.max(ans, sum);
     }
 
 
