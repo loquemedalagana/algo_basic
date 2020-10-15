@@ -31,6 +31,17 @@ MAP = Array.from(Array(H+1), () => Array(W+1).fill(0));
 check = Array.from(Array(H+1), () => Array.from(Array(W+1), () => Array(4).fill(0)));
 ```
 
+## js map, foreach index find
+https://stackoverflow.com/questions/20798477/how-to-find-index-of-all-occurrences-of-element-in-array/20798567
+
+``` javascript
+temp.forEach((e, i) => {
+    if(e === '#') {
+        console.log(i);                    
+    }
+})
+```
+
 ## js permutation
 
 ``` javascript
