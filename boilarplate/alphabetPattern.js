@@ -16,3 +16,6 @@ for(let i=97; ;i++){
 
 console.log(upperCase);
 console.log(lowerCase);
+
+console.log(upperCase.join(''));
+console.log(lowerCase.join(''));
