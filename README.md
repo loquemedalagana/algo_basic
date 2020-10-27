@@ -19,6 +19,12 @@ const checkSpace = str => { //공백 체크
 };
 ```
 
+## ja 알파벳 배열
+``` javascript
+const upperCase = new Array(26).fill(0).map((_,i) => String.fromCharCode(i+65));
+const lowerCase = new Array(26).fill(0).map((_,i) => String.fromCharCode(i+97));
+```
+
 ## JS 정수 정렬
 
 ``` javascript
