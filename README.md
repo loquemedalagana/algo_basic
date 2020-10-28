@@ -25,6 +25,20 @@ const upperCase = new Array(26).fill(0).map((_,i) => String.fromCharCode(i+65));
 const lowerCase = new Array(26).fill(0).map((_,i) => String.fromCharCode(i+97));
 ```
 
+## 정규식
+``` javascript
+varType = varType.replace(/\s/g, '').replace(/]\[/gi, '[]');
+```
+
+
+```
+int[][][] a[], b[][], c[][][];
+[ 'int[][][]', 'a[]', 'b[][]', 'c[][][]' ]
+int[[][]][] a;
+int[[][]][][] b;
+int[[][]][][][] c;
+```
+
 ## JS 정수 정렬
 
 ``` javascript
