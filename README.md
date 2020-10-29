@@ -45,6 +45,16 @@ int[[][]][][][] c;
 arr.sort((first, second) => first-second); //내림차순은 반대로
 ```
 
+## js 문자열 대소문자 구분x정렬
+
+``` javascript
+arr.sort((a, b) => {
+    if(a.toUpperCase() > b.toUpperCase()) return 1;
+    else if (a.toUpperCase() < b.toUpperCase()) return -1;
+    else return 0;
+});
+```
+
 ## JS 다차원 배열 생성
 
 ``` javascript
