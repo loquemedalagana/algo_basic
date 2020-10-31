@@ -30,6 +30,13 @@ const lowerCase = new Array(26).fill(0).map((_,i) => String.fromCharCode(i+97));
 varType = varType.replace(/\s/g, '').replace(/]\[/gi, '[]');
 ```
 
+## 정규식에 변수넣기 (객체생성)
+``` javascript
+const str = 'hi';
+const reg = new RegExp(str, 'g');
+console.log('hibabyhibbb'.match(reg));
+```
+
 
 ```
 int[][][] a[], b[][], c[][][];
