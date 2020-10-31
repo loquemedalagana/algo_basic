@@ -19,12 +19,6 @@ const checkSpace = str => { //공백 체크
 };
 ```
 
-## ja 알파벳 배열
-``` javascript
-const upperCase = new Array(26).fill(0).map((_,i) => String.fromCharCode(i+65));
-const lowerCase = new Array(26).fill(0).map((_,i) => String.fromCharCode(i+97));
-```
-
 ## 정규식
 ``` javascript
 varType = varType.replace(/\s/g, '').replace(/]\[/gi, '[]');
@@ -32,11 +26,10 @@ varType = varType.replace(/\s/g, '').replace(/]\[/gi, '[]');
 
 ## 정규식에 변수넣기 (객체생성)
 ``` javascript
-const str = 'hi';
+const str = `(hi){3}`;
 const reg = new RegExp(str, 'g');
-console.log('hibabyhibbb'.match(reg));
+console.log('hihihibabyhibbb'.match(reg));
 ```
-
 
 ```
 int[][][] a[], b[][], c[][][];
@@ -44,6 +37,17 @@ int[][][] a[], b[][], c[][][];
 int[[][]][] a;
 int[[][]][][] b;
 int[[][]][][][] c;
+```
+
+## js 최대값
+``` javascript
+const maxnum = Number.MAX_SAFE_INTEGER;
+```
+
+## ja 알파벳 배열
+``` javascript
+const upperCase = new Array(26).fill(0).map((_,i) => String.fromCharCode(i+65));
+const lowerCase = new Array(26).fill(0).map((_,i) => String.fromCharCode(i+97));
 ```
 
 ## JS 정수 정렬
