@@ -20,6 +20,7 @@ const checkSpace = str => { //공백 체크
 ```
 
 ## 정규식
+### 주의할 점은 띄어쓰기 하지말자!!
 ``` javascript
 varType = varType.replace(/\s/g, '').replace(/]\[/gi, '[]');
 ```
