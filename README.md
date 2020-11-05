@@ -61,6 +61,19 @@ const mRegExp = new RegExp(/[CDEFGAB]#?/g);
 const maxnum = Number.MAX_SAFE_INTEGER;
 ```
 
+## js spread operator example
+``` javascript
+if(ok) {
+    console.log(inputs, gender, birthday);
+    const userPersonalInfo = {
+        gender,
+        birthday,
+        ...inputs
+    }
+    console.log(userPersonalInfo);
+}
+```
+
 ## ja 알파벳 배열
 ``` javascript
 const upperCase = new Array(26).fill(0).map((_,i) => String.fromCharCode(i+65));
