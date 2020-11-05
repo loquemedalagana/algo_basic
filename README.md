@@ -7,6 +7,16 @@
 
 <hr/>
 
+## js 배열 findindex vs indefof
+<ul>
+    <li>findindex는 조건에 맞는 데이터 인덱스 리턴</li>
+    <li>indexof는 괄호 안에 데이터랑 똑같은거를 찾는거</li>
+</ul>
+
+``` javascript
+const idx = acc.findIndex(e => e.kind === kind);
+```
+
 ## js 문자열 체크
 
 ``` javascript
