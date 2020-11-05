@@ -40,6 +40,12 @@ int[[][]][][] b;
 int[[][]][][][] c;
 ```
 
+## 방금그곡 문제 정규식
+
+``` javascript
+const mRegExp = new RegExp(/[CDEFGAB]#?/g);
+```
+
 ## js 최대값
 ``` javascript
 const maxnum = Number.MAX_SAFE_INTEGER;
