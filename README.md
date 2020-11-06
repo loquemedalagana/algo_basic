@@ -7,6 +7,14 @@
 
 <hr/>
 
+## js 부분집합
+``` javascript
+Set.prototype.isSuperset = function(subset) {
+    const supersetArr = [...this];
+    return [...subset].every(v => supersetArr.includes(v))
+}
+```
+
 ## js 배열 findindex vs indefof
 <ul>
     <li>findindex는 조건에 맞는 데이터 인덱스 리턴</li>
