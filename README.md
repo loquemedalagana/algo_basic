@@ -7,12 +7,15 @@
 
 <hr/>
 
-## js 부분집합
+## js 객체 -> 배열 변환 함수
 ``` javascript
-Set.prototype.isSuperset = function(subset) {
-    const supersetArr = [...this];
-    return [...subset].every(v => supersetArr.includes(v))
-}
+const 새배열 = Object.keys(객체명).map(key => {
+        return (
+            key는 매개변수로 받은 key를,
+            value는 "객체명[key]"를,
+            이용해서 목적에 맞게 바꾸기!
+        )
+});
 ```
 
 ## js 배열 findindex vs indefof
